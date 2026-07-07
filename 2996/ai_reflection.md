@@ -60,20 +60,20 @@ My answer:
 
 | Statement | Yes / No / Not Applicable | Short note |
 |---|---|---|
-| I read the relevant workflow before using AI. |  | Example: `workflows/STUDENT_WORKFLOW_WEB_CHAT.md`, `workflows/STUDENT_WORKFLOW_CHATGPT_CODEX.md`, `workflows/STUDENT_WORKFLOW_CLAUDE_CODE.md`, or another workflow announced by the instructor | Yes
+| I read the relevant workflow before using AI. | Yes | `workflows/STUDENT_WORKFLOW_WEB_CHAT.md`, `workflows/STUDENT_WORKFLOW_CHATGPT_CODEX.md`|
 
-| I used `instructions/COURSE_AI_INSTRUCTIONS.md`, `instructions/AGENTS.md`, or manually followed the course AI instructions if the tool did not support custom instructions. |  | Briefly explain how you used or followed it | Yes
+| I used `instructions/COURSE_AI_INSTRUCTIONS.md`, `instructions/AGENTS.md`, or manually followed the course AI instructions if the tool did not support custom instructions. | Yes | เอา AGENTS.md มาให้ ChatGPT ทำตามเหมือนเป็นผู้ช่วย |
 
-| I wrote my own problem understanding before asking AI for help. |  | Briefly say where you wrote it, such as `submission.md` or private note |No
+| I wrote my own problem understanding before asking AI for help. | No | ไม่ได้เขียนไว้ |
 
-| I wrote my own first plan before asking AI for help. |  | Briefly say where you wrote it | No
+| I wrote my own first plan before asking AI for help. | No | ไม่ได้เขียนไว้ | 
 
-| I used AI as a coach, reviewer, debugger, or test-case helper, not as a full-answer generator. |  | Briefly explain | Yes
+| I used AI as a coach, reviewer, debugger, or test-case helper, not as a full-answer generator. | Yes | ใช้ไอเอหาเทคนิค ช่วยบอกแนวทางการทำโจทย์ |
 
 ถ้าตอบ "No" ในข้อใด ให้อธิบายเหตุผล:
 
 ```
-    ข้อที่สามและสี่เพราะว่า อ่านๆแล้วเหมือนจะเข้าใจโจทย์ แต่ก็ยัง งง ว่ามันจะแก้ยังไง เริ่มยังไง ใช้อะไร
+    ข้อที่สามและสี่เพราะว่า ตอนที่อ่านครั้งแรกอ่านๆแล้วเหมือนจะเข้าใจโจทย์ลองวางแผนไปคร่าวๆมันก็ดูไม่ใช่ ก็ยัง งง ว่ามันจะแก้ยังไง เริ่มยังไง ใช้อะไรดีที่มันกระชับไม่ซับซ้อน
 
 ```
 
@@ -120,7 +120,7 @@ My answer:
 My answer:
 
 ```
-    วิธีหาความรู้ในเว็ปอื่น
+    วิธีหาความรู้ในเว็บไซต์
     ความเข้าใจผิดเกี่ยวกับโจทย์
     ปูทางแรกให้แล้วให้ลองหาวิธีเอาเอง
 
@@ -145,7 +145,6 @@ My answer:
 
 ```
     - หลังจากได้คำแนะนำมา ฉันเริ่มหาความรู้ก่อนว่ามีวิธีที่ดีกว่า for loop ไหม ตาม w3school ไฟล์เรียนเก่า
-    - ฉันไม่ใช้บางคำแนะนำของ AI เพราะไม่ตรงกับ constraints ของโจทย์
     - ฉันปรับคำแนะนำของ AI ให้เป็น code ที่ฉันเข้าใจเอง
 
 
@@ -164,8 +163,9 @@ My answer:
 My answer:
 
 ```
-    ชี้แนวการเรียนรู้ใหม่ ว่าลองแบบนี้ดูไหม เทคนิคนี้ดี
-    เอไอสอนแบบให้เราบอกว่าเราเข้าใจแบบไหนก่อน ถ้าผิดจะบอกให้รู้ที่ถูกและเราพลาดตรงไหนไป
+    ฉันได้แนวทางการเรียนรู้ใหม่ ว่าลองแบบนี้ดูไหม เทคนิคนี้ดี
+    เอไอสอนแบบให้เราบอกก่อนว่าเราเข้าใจแบบไหนก่อน ถ้าผิดจะบอกให้รู้ที่ถูกและเราพลาดตรงไหนไป
+    ได้เรียนรู้ว่า ถ้าเจอโจทย์แบบนี้ ให้ลองวางแผนง่ายๆก่อน อย่างวาด flowchart ขั้นตอนการทำงานว่าเริ่มตรงไหน แล้วทำไรต่อ
 
 ```
 
