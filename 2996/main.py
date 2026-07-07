@@ -1,15 +1,6 @@
 """สลับตัวอักษร"""
 
 text = input()
-
+makesmall = text.casefold()
 if len(text) == 5:
-    letters = list(text)
-
-
-        #ยังทำไม่เสร็จ
-
-
-
-
-
-
+    print(makesmall[::-1])
