@@ -14,7 +14,7 @@
 
 หมายเลข/ชื่อโจทย์ OJ:
 ```
-    [LEARNING LOGS] Colors
+  3011  [LEARNING LOGS] Colors
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:

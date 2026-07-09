@@ -14,7 +14,7 @@
 
 หมายเลข/ชื่อโจทย์ OJ:
 ```
-    [LEARNING LOGS] สลับตัวอักษร
+   2996 [LEARNING LOGS] สลับตัวอักษร
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
