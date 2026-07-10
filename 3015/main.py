@@ -1,19 +1,11 @@
 """Pro"""
 
-x = 4
-y = 3
+x = int(input())
+y = int(input())
 
 a = int(input()) #สมมติราคาต่อคน
 z = int(input()) #จำนวนคน
 
-pro = 0
+pro = (z//x)
 
-if z >= x:
-    pro = a*y
-    total = pro
-    print(total)
-
-else:
-    total = a*x
-    print(total)
-    
+total = 0
