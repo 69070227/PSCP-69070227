@@ -1,0 +1,19 @@
+"""[LEARNING LOGS] Bill"""
+
+price = float(input())
+service = 0
+
+if price < 500:
+    service = 50
+elif price > 10000:
+    service = 1000
+
+elif price <= 0:
+    service = 0
+
+else:
+    service = price / 10
+
+vat = (price + service)*0.07
+total = (price + service) + vat
+print(f"{total:.2f}")
