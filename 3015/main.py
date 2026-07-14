@@ -1,11 +1,16 @@
 """Pro"""
+def main():
+    """"main"""
+    x = int(input())
+    y = int(input())
 
-x = int(input())
-y = int(input())
+    a = int(input()) #สมมติราคาต่อคน
+    z = int(input()) #จำนวนคน
 
-a = int(input()) #สมมติราคาต่อคน
-z = int(input()) #จำนวนคน
+    come = z//x
+    pay = z % x
 
-pro = (z//x)
+    total = (come * y + pay) * a
+    print(total)
 
-total = 0
+main()
