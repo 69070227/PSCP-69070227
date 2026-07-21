@@ -2,20 +2,25 @@
 
 def main():
     """main"""
-    full_price = int(input())
+    og_price = int(input())
     cap_jamnuan = int(input())
-    discount_price = int(input())
-    d_jamnuan = int(input())
+    new_price = int(input())
+    d_jamnuanbottle = int(input())
 
-    caps = 0
-    cost = 0
-    bought_bottle = 0
+    if d_jamnuanbottle > 0 and cap_jamnuan > 0:
+        promotion = (d_jamnuanbottle - 1) // cap_jamnuan
+        fullprice = d_jamnuanbottle - promotion
 
-    while bought_bottle < d_jamnuan:
-        if cap_jamnuan > 0:
-            if caps >= cap_jamnuan:
-                cost += discount_price
-                caps -=cap_jamnuan
-            else:
-                cost +=
+        total = (fullprice * og_price) + (promotion * new_price)
+        print(total)
+
+    elif not cap_jamnuan: #cap_jamnuan == 0
+        total = d_jamnuanbottle * og_price
+        print(total)
+
+
+    elif not d_jamnuanbottle: #d_jamnuanbottle == 0
+        total = 0
+        print(total)
+
 main()
