@@ -14,6 +14,6 @@ elif price <= 0:
 else:
     service = price / 10
 
-vat = (price + service)*0.07
-total = (price + service) + vat
+vat = (price + service)*0.07 #คำนวณออกมาแค่ตัวเงินภาษี
+total = (price + service) + vat #ราคารวมที่บวกภาษี
 print(f"{total:.2f}")
