@@ -9,6 +9,7 @@ def main():
     y2 = int(input())
     r2 = int(input())
 
+    #ระยะห่างระหว่างจุดศูนย์กลางของวงกลม
     DISTANCE = math.sqrt(((x1 -x2)**2)+((y1 - y2)**2))
     rad = r1 +r2
 

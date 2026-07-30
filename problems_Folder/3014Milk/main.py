@@ -13,11 +13,10 @@ caps = initial_bottles          # ฝาขวดตั้งต้น = จำ�
 if b > 0 and c > 0:
     while caps >= b:
         exchanges = caps // b # จำนวนครั้งที่สามารถนำฝาไปแลกได้
-        new_bottles = exchanges * c  # จำนวนนมขวดใหม่ที่ได้จากการแลกครั้งนี้
+        new_bottles = exchanges * c
 
-        total_bottles += new_bottles # สะสมจำนวนนมทั้งหมด
+        total_bottles += new_bottles
 
-        # ฝาที่เหลืออยู่ = (ฝาที่เหลือจากการแลก) + (ฝาใหม่จากนมที่เพิ่งได้มา)
         caps = (caps % b) + new_bottles
 
 print(total_bottles)

@@ -4,7 +4,7 @@ def main():
     """main"""
     x = int(input())
     floor = 1
-    while floor **2 < x:
+    while floor **2 < x: #ห้องสุดท้ายของชั้นนั้น
         floor += 1
     far = (floor **2) - x
     room = 2*(floor) - 1 #ใช้หาจำนวนห้องทั้งหมดในชั้นนั้นเป็นเลขคี่

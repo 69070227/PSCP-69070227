@@ -8,7 +8,10 @@ def main():
     for _ in range(n):
         score = int(input())
         num.append(score)
-    print(max(num))
-    print(num.count(max(num)))
+
+    maximum = max(num)
+
+    print(maximum)
+    print(num.count(maximum))
 
 main()

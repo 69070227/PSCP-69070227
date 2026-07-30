@@ -8,8 +8,8 @@ def main():
     d_jamnuanbottle = int(input())
 
     if d_jamnuanbottle > 0 and cap_jamnuan > 0:
-        promotion = (d_jamnuanbottle - 1) // cap_jamnuan
-        fullprice = d_jamnuanbottle - promotion
+        promotion = (d_jamnuanbottle - 1) // cap_jamnuan #หาว่าใช้โปรกี่ครั้ง
+        fullprice = d_jamnuanbottle - promotion #หาขวดที่ไม่ได้ใช้โปร
 
         total = (fullprice * og_price) + (promotion * new_price)
         print(total)
