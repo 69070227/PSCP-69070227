@@ -1,17 +1,23 @@
 """milk"""
+a = int(input()) # ราคานมต่อขวด
+b = int(input()) # จำนวนฝาที่ต้องใช้แลก
+c = int(input()) # จำนวนนมที่จะได้จากการแลก b ฝา
+d = int(input()) # เงินที่ลูกค้ามี
 
-def main():
-    """main"""
-    og_price = int(input())
-    cap_jamnuan = int(input())
-    d_jamnuanbottle = int(input())
-    customer_havemoney = int(input())
-    total_bottle = customer_havemoney // og_price
-    if not cap_jamnuan:
-        print(total_bottle)
-        return
-    caps = total_bottle
-    while 
+#คำนวณการซื้อรอบแรก
+initial_bottles = d // a   # หารเอาเศษ เพื่อดูว่าเงิน d บาท ซื้อนมได้กี่ขวด
+total_bottles = initial_bottles # นมทั้งหมดที่ได้รับ ณ ตอนนี้
+caps = initial_bottles          # ฝาขวดตั้งต้น = จำนวนขวดที่ซื้อได้
 
-main()
+#โปรโมชัน
+if b > 0 and c > 0:
+    while caps >= b:
+        exchanges = caps // b # จำนวนครั้งที่สามารถนำฝาไปแลกได้
+        new_bottles = exchanges * c  # จำนวนนมขวดใหม่ที่ได้จากการแลกครั้งนี้
 
+        total_bottles += new_bottles # สะสมจำนวนนมทั้งหมด
+
+        # ฝาที่เหลืออยู่ = (ฝาที่เหลือจากการแลก) + (ฝาใหม่จากนมที่เพิ่งได้มา)
+        caps = (caps % b) + new_bottles
+
+print(total_bottles)

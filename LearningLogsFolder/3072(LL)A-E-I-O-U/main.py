@@ -1,6 +1,5 @@
 """[LEARNING LOGS] A-E-I-O-U"""
 
-#เริ่ม17:25
 WORD = input().casefold()
 
 vowels = ["a","e","i","o","u"]
