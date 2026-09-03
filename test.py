@@ -1,19 +1,32 @@
-"""esgjeg"""
-n = int(input())
-min_num = 9999999
-max_num = -9999999
-average = 0
-for i in range(n):
-    num = int(input())
-    if num < min_num:
-        min_num = num
-    if num > max_num:
-        max_num = num
+"""aegega"""
+
+letter = input().upper()
+kanat = int(input())
+
+#จากที่ลองทด แถวจะเป็น 1 3 5 7 9 11 ไปเรื่อยๆ บวกสอง
+taew = (kanat * 2) - 1  
+# หาจุดกึ่งกลางของลูกศร (ถ้า taew=9, target=4)
+target = taew // 2
+
+if letter == "R":
+    #ครึ่งแรก
+    for i in range(kanat):
+        space = i * 2
+        num_rieang_bon = kanat - i
+        print(" " * space + "*" * num_rieang_bon)
     
-    average += num
+    for i in range(kanat - 1):
+        space = (abs((taew // 2)- i) - 1) * 2 
+        num_rieang_lang = i + 2
+        print(" " * space + "*" * num_rieang_lang)
 
-print(f"MIN: {min_num:.3f}")
-print(f"MAX: {max_num:.3f}")
-average = average / n
 
-print(f"AVG: {average:.3f}")
+elif letter == "L":
+    for i in range(kanat):
+            space = (abs((taew // 2)- i)) * 2
+            num_rieang_lang = i + 1
+            print(" " * space + "*" * num_rieang_lang)
+    for i in range(kanat - 1):
+            space = (i + 1) * 2
+            num_rieang_bon = kanat - i - 1
+            print(" " * space + "*" * num_rieang_bon)

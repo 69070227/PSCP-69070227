@@ -1,27 +1,22 @@
-"""PASS?NOT PASS average"""
-import math
-
+"""pass or not"""
 subject_N = int(input())
-total = []
-RESULT = ""
-for i in range(subject_N):
-    add_subject = float(input())
-    total.append(add_subject)
 
-result_total = sum(total)
-average = result_total /subject_N
-average = math.ceil(average * 100) / 100
+total = 0
+all_pass = True
 
-RESULT = "PASS"
-for i in total:
-    if i <= 50:
-        if average <= 50:
-            RESULT = "FAIL"
-            break
-    else:
-        if average > 60:
-            RESULT = "PASS"
+for _ in range(subject_N):
 
+    score = int(input())
+    total += score
+
+    if score < 50:
+        all_pass = False
+
+average = total / subject_N
 
 print(f"{average:.1f}")
-print(RESULT)
+
+if all_pass and average >= 60:
+    print("PASS")
+else:
+    print("FAIL")
