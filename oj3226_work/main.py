@@ -1,22 +1,12 @@
-"""INFLATIon"""
-n = float(input())
-k = int(input())
+""" Inflation """
 
-# วนลูปคิดเงินเฟ้อทีละปี
-for year in range(k):
-    # คำนวณเงินเฟ้อของปีนั้น
-    inflation = n * 0.0381
-
-    # แก้ปัญหาทศนิยมเพี้ยน: แปลงเป็นข้อความที่มีทศนิยมยาวๆ ก่อน
-    inf_str = f"{inflation:.10f}"
-
-    # แยกส่วนหน้าจุด และ ส่วนหลังจุดทศนิยม
-    before_dot, after_dot = inf_str.split('.')
-
-    # บังคับตัดเอาเฉพาะหลังจุดแค่ 2 ตัวแรกเท่านั้น (เช่น 31999 -> 31)
-    clean_inflation = float(before_dot + '.' + after_dot[:2])
-
-    # นำเงินเฟ้อที่ตัดเศษแล้วไปบวกเข้ากับราคาสินค้าเดิม
-    n = n + clean_inflation
-
-print(f"{n:.2f}")
+price = float(input())
+years = int(input())
+# เก็บเงินเป็น "สตางค์" (จำนวนเต็ม) เพื่อไม่ให้ float ปัดเศษเพี้ยน
+satang = round(price * 100)
+for _ in range(years):
+    # ส่วนที่เพิ่มขึ้นแต่ละปี ตัดเศษทิ้งตั้งแต่สตางค์หลักที่ 3
+    satang += satang * 381 // 10000
+# แยกบาทกับสตางค์ด้วยจำนวนเต็ม ไม่แปลงกลับเป็น float
+# เพราะถ้า k เยอะ ค่าจะใหญ่เกินกว่าที่ float เก็บได้
+print(f"{satang // 100}.{satang % 100:02d}")
