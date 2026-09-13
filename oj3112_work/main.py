@@ -52,4 +52,5 @@ result_kai = function_kaimook(in_kai,inamount_K)
 result_cha = functioncha(in_cha,in_sweet,inamount_C)
 
 total = result_kai + result_cha
+#ถ้าเจอ .0 ให้ตัดออก แต่ถ้าเจอเป็นทศนิยมจะแสดง
 print(f"{total:g}")

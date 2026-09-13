@@ -13,33 +13,43 @@
 ## 1. ข้อมูล OJ
 
 หมายเลข/ชื่อโจทย์ OJ:
-```
-  3011  [LEARNING LOGS] Colors
+
+```text
+3042- [LEARNING LOGS] หาร 10
 ```
 
 OJ submission ID ถ้ามีการส่งแล้ว:
 
-```
-    545089
+```text
+558289
 ```
 
 สถานะ OJ:
 
 ```text
-    Pass
+Pass
 ```
 
 เวลาที่ใช้คิดและทำโจทย์ด้วยตนเอง:
 
-```
-    ประมาณสองชั่วโมง
-
+```text
+1-3 hours
 ```
 
 เลือกหนึ่งข้อ:
 
+```text
+0-15 minutes
+15-30 minutes
+30-60 minutes
+1-3 hours
+3-6 hours
+6-24 hours
+1-3 days
+4-7 days
+1-4 weeks
+More than 4 weeks
 ```
-1-2 hours
 
 วิธีนับเวลา:
 
@@ -62,15 +72,8 @@ OJ submission ID ถ้ามีการส่งแล้ว:
 
 ถ้ายังไม่เข้าใจโจทย์ทั้งหมด ให้เขียนสิ่งที่เข้าใจในตอนนี้ ความเข้าใจอาจยังไม่ครบหรืออาจผิดได้ แต่ต้องพยายามอธิบายอย่างจริงใจ
 
-```
-
-    โจทย์ให้ทำการผสมสี สีแรกถ้าเป็นสีนึง เจอกับสีนึง ผสมกันผลจะออกมาเป็นสีอะไร
-    Input: รับข้อความ (string) 2 อัน สีแรก กับสีที่สอง
-    Output: แสดงข้อความผลสีที่ผสมได้
-    Constraints: 
-    -รับอินพุดมาสองสี
-    -มีแม่สีสามสีให้ผสม แดง ฟ้า เหลือง
-    -ถ้าไม่ใช่สีตามแม่สีหรือสีอื่นๆนอกจากสีแดงฟ้าเหลือง ให้ขึ้น error
+```text
+ให้เขียนโปรแกรมคิดแสดงผลจำนวนเต็มบวกตั้งแต่ N ถึง 0 ที่หารด้วย 10 ลงตัว 
 ```
 
 ---
@@ -89,11 +92,8 @@ OJ submission ID ถ้ามีการส่งแล้ว:
 
 สามารถเขียนเป็น pseudocode, flowchart idea หรือขั้นตอนความคิดได้
 
-```
-    แผนแรก ใช้ if else ตั้งเลยสีแดงเจอกับเหลือง ฟ้าจะเป็นสีอะไร แต่พบว่าโค้ดยาวเกินไปและซับซ้อน เอาท์พุดออกมาไม่ตรง
-Step 1: ตั้งตัวแปรเก็บค่าที่ผู้ใช้อินพุดสองตัว คือ สีแรก และ สีที่สอง
-Step 2:ตั้งเงื่อนไขให้เชื่อมกันหมด แดงเหลือง เหลืองแดง แดงฟ้า ฟ้าแดง ไปเรื่อยๆ 
-Step 3:ลองoutput
+```text
+ใช้ for loop range
 ```
 
 ---
@@ -112,9 +112,8 @@ Step 3:ลองoutput
 
 ห้ามคัดลอกคำอธิบายจากคนอื่น
 
-```
-    ใช้การตั้งเงื่อนไขซ้อนเงื่อนไข อย่างถ้า สีแรกเป็นสีแดง ก็ตั้งเงื่อนไขข้างในต่อว่า ถ้าเจอเหลืองจะเป็นส้ม เจอฟ้าเป็นม่วง
-
+```text
+ใช้ while loop ตั้งเงื่อนไขว่า ถ้า n หารสิบลงตัว ถ้าไม่ ให้ลบหนึ่งไปเรื่อยๆจนกว่าจะหารสิบลงตัวและแสดงค่านั้นเรื่อยๆลงมาที่หารสิบลงตัวทุกอันลดลงมาเรื่อยๆจนถึง 0
 ```
 
 ---
@@ -130,68 +129,29 @@ Step 3:ลองoutput
 ถ้า input หรือ output มีหลายบรรทัด ให้เขียนไว้ใน text blocks
 
 ### Test Case 1
+
 ทำไมเลือก case นี้:
 
-``` 
-    เพราะเริ่มแบบง่ายๆพิมพ์ง่ายๆ ดูความแตกต่างออกได้ง่าย
-
+```text
+อยากทดสอบว่า output ตรงกับ sample test case ที่ให้มาหรือไม่
 ```
 
 Input:
 
-```
-Red
-Yellow
-
+```text
+80
 ```
 
 Expected output:
 
-```
-Orange
-
-```
-
-Actual output:
-
-```
-Orange
-
-```
-
-Result:
-
-```
-Not Pass
-```
-
-### Test Case 2
-ทำไมเลือก case นี้:
-
-```เพราะคิดว่าที่ output ถูกแต่ลองส่งกลับไม่ผ่าน เลยแก้โค้ดให้ เติม capitalize เพิ่มเข้าไป เพื่อให้ถ้าเราพิมพ์ red เฉยๆ มันก็จะสามารถเป็น Red และเข้าเงื่อนไขได้ และทดสอบอีกครั้ง
-
-```
-
-Input:
-
-```
-red
-yellow
-
-```
-
-Expected output:
-
-```
-    Orange
-
+```text
+80 70 60 50 40 30 20 10 0
 ```
 
 Actual output:
 
-```
-    Orange
-
+```text
+70 60 50 40 30 20 10 0
 ```
 
 Result:
@@ -200,34 +160,62 @@ Result:
 Not Pass
 ```
 
-### Test Case 3
+### Test Case 2
 
 ทำไมเลือก case นี้:
-```
-    เพราะให้เอไอตรวจจุดที่ยังพลาดไปว่า เงื่อนไขถ้าสีมันเจอสีตัวเองมันจะออกผลลัพย์ไง ถ้าสีแรกถูกเงื่อนไขแล้วสีที่สองเป็นสีที่ไม่ใช้แดงฟ้าเหลืองจะออกผลลัพย์อะไร เลยแก้โค้ดด้วยตนเอง และเริ่มทดสอบใหม่
 
+```text
+อยากทดสอบว่า output ตรงกับ sample test case ที่ให้มาหรือไม่
 ```
 
 Input:
 
-```
-    Red
-    Black
-
+```text
+80
 ```
 
 Expected output:
 
-```
-    Error
-
+```text
+80 70 60 50 40 30 20 10 0
 ```
 
 Actual output:
 
+```text
+80 70 60 50 40 30 20 10 0
 ```
-Error
 
+Result:
+
+```text
+Pass
+```
+
+### Test Case 3
+
+ทำไมเลือก case นี้:
+
+```text
+อยากลองหลักหน่วย
+```
+
+Input:
+
+```text
+1
+```
+
+Expected output:
+
+```text
+0
+```
+
+Actual output:
+
+```text
+0
 ```
 
 Result:
@@ -243,7 +231,7 @@ Pass
 ใช้ AI กับโจทย์นี้หรือไม่
 
 ```text
-Yes
+No
 ```
 
 ถ้าใช้ AI ต้องทำไฟล์นี้ด้วย:
@@ -315,10 +303,10 @@ No
 
 | Statement | Yes/No |
 |---|---|
-| I wrote this submission in my own words. |Yes |
-| I understand my final code. |Yes |
-| I recorded the real OJ status. |Yes |
-| I did not copy AI-generated text directly into this file. |Yes |
-| I did not copy code from another person. |Yes |
-| If I received human help, I disclosed it in this file. |Yes |
-| I submitted the final code to the OJ by myself. |Yes |
+| I wrote this submission in my own words. | Yes |
+| I understand my final code. | Yes |
+| I recorded the real OJ status. | Yes |
+| I did not copy AI-generated text directly into this file. | Yes |
+| I did not copy code from another person. | Yes |
+| If I received human help, I disclosed it in this file. | Yes |
+| I submitted the final code to the OJ by myself. | Yes |
