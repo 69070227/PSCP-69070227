@@ -1,19 +1,22 @@
-"""wfj"""
+"""สมดุลย์ชีวิต"""
 
-seat = int(input())
-discount = 1
-list_ticket = []
-while seat > 0:
-    age,amount = map(int,input().split())
-    if age >= 15:
-        ticket = 150
-    elif 15 <= age <=22:
-        discount = 0.20
-    elif age > 60:
-        discount = 0.50
-    else:
-        result = -1
-    result = (ticket * amount)*discount
-    seat -= amount
-    
-    print(result,amount)
+work = int(input())
+hard_work = []
+light_work = []
+DAYS = 0
+for _ in range(work):
+    hour_each = int(input())
+    if hour_each > 18:
+        hard_work.append(hour_each)
+    elif hour_each <= 18:
+        light_work.append(hour_each)
+
+if len(light_work) >= len(hard_work):
+    DAYS = len(hard_work) + len(light_work)
+
+elif len(light_work) < len(hard_work):
+    # ลบหนึ่งเพราะว่าหาแค่ตัวระหว่าง
+    WAN_YUD =  len(hard_work) - len(light_work) - 1
+    DAYS = len(hard_work) + len(light_work) + WAN_YUD
+
+print(DAYS)
