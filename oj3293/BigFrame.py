@@ -1,6 +1,7 @@
 """[LEARNING LOGS] BigFrame"""
 text = []
 
+#รับมาห้าบรรทัด
 for i in range(5):
     #strip  ตัดช่องว่าง
     inp = input().strip()

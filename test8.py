@@ -8,11 +8,15 @@ tickets_price = 150
 discount = 1
 total = 0
 while seat > 0:
-    age,tickets = map(int,input().split())
+    try:
+        age, tickets = map(int, input().split())
 
-    age_list.append(age)
-    tickets_list.append(tickets)
-    if tickets > seat:
+    except ValueError:
+        break
+
+    if age < 15:
+        print(-1)
+    elif tickets > seat:
         print(-2)
     else:
         seat -= tickets
