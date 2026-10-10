@@ -329,12 +329,384 @@ h = 0
 # บรรทัดแรก สลับค่าจากตัวแปร a ให้เป็น b
 # บรรทัดที่ 2 สลับค่าจากตัวแปร b ให้ เป็น a
 
-a = int(input("a = "))
-b = int(input("b = "))
+    # a = int(input("a = "))
+    # b = int(input("b = "))
 
-reverse_a = a
-a = b
-b = reverse_a
+    # reverse_a_for_b = a
+    # a = b
+    # b = reverse_a_for_b
 
-print(f"a = {a}")
-print(f"b = {reverse_a}")
+    # print(f"a = {a}")
+    # print(f"b = {reverse_a_for_b}")
+
+
+"""unit10 if/else เงื่อนไข"""
+
+# จงพิจารณาชุดคำสั่งต่อไปนี้ พร้อมตอบคำถาม
+# if y == 8:
+# if x == 5:
+# print("@@@@@")
+# else:
+# print("#####")
+# print("$$$$$")
+# print("&&&&&")
+    # 1. ถ้า x = 5 และ y = 8   >>> @@@@@,$$$$$,&&&&&
+    # 2. ถ้า x = 5 และ y = 5   >>> $$$$$,&&&&&
+    # 3. ถ้า x = 8 และ y = 8   >>> #####,$$$$$,&&&&&
+    # 4. ถ้า x = 8 และ y = 5   >>> $$$$$,&&&&&
+
+
+# 5. รับค่าคะแนน เป็นเลขจำนวนเต็ม แล้วทำการเขียนโปรแกรมเพื่อคำนวณเกรด โดยมีเกณฑ์การให้เกรด
+# ดังนี้
+# - ถ้าคะแนนมากกว่าหรือเท่ากับ 80 ได้เกรด A
+# - ถ้าคะแนนอยู่ในช่วง 70 – 79 ได้เกรด B
+# - ถ้าคะแนนอยู่ในช่วง 60 – 69 ได้เกรด C
+# - ถ้าคะแนนอยู่ในช่วง 50 – 59 ได้เกรด D
+# - ถ้าคะแนนต่ำกว่า 50 ได้เกรด F
+
+    # kanan = int(input())
+    # if kanan >= 80:
+    #     print("A")
+    # elif 70 <= kanan <= 79:
+    #     print("B")
+    # elif 60 <= kanan <= 69:
+    #     print("C")
+    # elif 50 <= kanan <= 59:
+    #     print("D")
+    # elif 50 > kanan:
+    #     print("F")
+
+# 6. รับจำนวนเต็มบวกหนึ่งจำนวน แล้วหาว่าจำนวนนั้นมากกว่า 31 หรือไม่
+    # num = int(input())
+    # if num > 31:
+    #     print(True)
+
+# 7. รับจำนวนเต็มบวกหนึ่งจำนวน แล้วหาว่าจำนวนนั้นน้อยกว่า 90 หรือไม่
+    # num = int(input())
+    # if num < 90:
+    #     print(True)
+
+# 8. รับจำนวนเต็มบวกหนึ่งจำนวน แล้วหาว่าเป็นจำนวนคู่หรือคี่
+    # num = int(input())
+    # if num % 2 == 0:
+    #     print("even")
+    # else:
+    #     print("odd")
+
+# 9. รับจำนวนเต็มบวกหนึ่งจำนวน แล้วหาว่าเป็นจำนวนที่หารด้วย 3 ลงตัวหรือไม่
+    # num = int(input())
+    # if num % 3 == 0:
+    #     print(True)
+    # else:
+    #     print(False)
+
+# 10. รับจำนวนเต็มบวกหนึ่งจำนวน แล้วหาว่าเป็นจำนวนคู่ที่หารด้วย 3 ลงตัวหรือไม่
+    # num = int(input())
+    # if num % 6 == 0:
+    #     print(True)
+    # else:
+    #     print(False)
+
+# 11. รับจำนวนเต็มบวกที่เป็นเลขสองหลักหนึ่งจำนวน แล้วหาว่าจำนวนนั้นมีเลขแต่ละหลักเหมือนกันหรือ
+# ต่างกัน
+    # num = input()
+    # firstnum = num[0]
+    # secondnum = num[1]
+    # if firstnum == secondnum:
+    #     print("เลขเหมือนกัน")
+    # else:
+    #     print("เลขต่างกัน")
+
+# 12. รับจำนวนเต็มบวกที่เป็นเลขสองหลักหนึ่งจำนวน แล้วหาว่าจำนวนนั้นมีเลขโดดในหลักสิบมากกว่าเลข
+# โดดในหลักหน่วยหรือไม่
+    # num = int(input())
+
+    # tens = num // 10 # หลักสิบ
+    # nuai = num % 10 # หลักหน่วย
+
+    # if tens > nuai:
+    #     print(f"หลักสิบ ({tens}) มากกว่าหลักหน่วย ({nuai})")
+    # else:
+    #     print(f"หลักสิบ ({tens}) ไม่ได้มากกว่าหลักหน่วย ({nuai})") 
+
+# 13. รับจำนวนเต็มบวกที่เป็นเลขสองหลักหนึ่งจำนวน แล้วหาว่า หลักหน่วยน้อยกว่า (หรือมากกว่า หรือ
+# เท่ากับ) หลักสิบอยู่เท่าไหร่
+
+    # num = int(input())
+
+    # tens = num // 10 # หลักสิบ
+    # nuai = num % 10 # หลักหน่วย
+    # symbols = ""
+    # if nuai > tens:
+    #     symbols = ">"
+    # elif nuai < tens:
+    #     symbols = "<"
+    # elif nuai == tens:
+    #     symbols = "="
+
+    # print(f"หน่วย {nuai} {symbols} สิบ {tens}")
+
+# 14. รับจำนวนเต็มบวกที่เป็นเลขสองหลักหนึ่งจำนวน แล้วหาว่าผลรวมของเลขโดดมีค่าเท่ากับ 15 หรือไม่
+    
+    # num = int(input())
+
+    # tens = num // 10 # หลักสิบ
+    # nuai = num % 10 # หลักหน่วย
+
+    # solu = tens + nuai
+
+    # if solu == 15:
+    #     print(True)
+    # else:
+    #     print(False)
+
+# 15. รับจำนวนเต็ม 3 จำนวน แล้วหาจำนวนที่มากที่สุด
+
+    # num1,num2,num3 = map(int,input().split())
+    # print(max(num1,num2,num3))
+
+# 16. รับจำนวนเต็ม 3 จำนวน แล้วหาว่าจำนวนที่มากที่สุดมากกว่าจำนวนที่น้อยที่สุดอยู่เท่าไหร
+    # num1,num2,num3 = map(int,input().split())
+    # solu = max(num1,num2,num3) - min(num1,num2,num3)
+    # print(solu)
+
+
+# 17. สูตรในการเปลี่ยนค่าจากองศาเซลเซียสเป็นองศาฟาเรนไฮต์และเคลวิน มีดังนี้
+# 𝐹 =
+# 9
+# 5
+# 𝐶 + 32
+# 𝐾 = 𝐶 + 273.15
+# ให้อ่านข้อมูลอุณหภูมิ (หน่วยองศาเซลเซียส) แล้วคำนวณหาค่าองศาฟาเรนไฮต์และเคลวิน เมื่อ C คือ องศา
+# เซลเซียส F คือ องศาฟาเรนไฮต์ และ K คือเคลวิน
+# ข้อมูลเข้า
+# บรรทัดแรก รับค่าอุณหภูมิหน่วยองศาเซลเซียส เป็นจำนวนจริง
+# บรรทัดที่สอง รับตัวอักษรหนึ่งตัว ตัวใหญ่หรือตัวเล็กก็ได้
+
+    # c = float(input())
+    # name = input().upper()
+
+    # if name == "F":
+    #     solu = (9/5)*c + 32
+    # elif name == "K":
+    #     solu = c + 273.15
+    # else:
+    #     solu = "Error"
+
+    # print(solu)
+
+# 18. ค่า BMI เป็นค่าที่ใช้วัดความอ้วน เพื่อประเมินหาไขมันส่วนเกินในร่างกาย เพื่อคำนวณความเสี่ยงในการ
+# เป็นโรค
+# สูตรการคำนวณ คือ
+# 𝑤𝑒𝑖𝑔ℎ𝑡
+# ℎ𝑒𝑖𝑔ℎ𝑡
+# 2
+# ซึ่ง weight มีหน่วยเป็น กิโลกรัม (kg) และ height มีหน่วยเป็น เมตร (m)
+# จงเขียนโปรแกรมหาค่า BMI โดยบอกว่าค่า BMI ที่ได้นั้นเป็นเช่นไรเมื่อเทียบกับเกณฑ์ ดังนี้
+# - Underweight เมื่อค่า BMI น้อยกว่า 18.5
+# - Normal weight เมื่อค่า BMI มีค่าตั้งแต่ 18.5 แต่ไม่ถึง 25
+# - Overweight เมื่อค่า BMI มีค่าตั้งแต่ 25 แต่ไม่ถึง 30
+# - Obesity เมื่อค่า BMI มีค่าไม่ต่ำกว่า 30
+
+    # weight = float(input())
+    # height = float(input())
+
+    # bmi = weight/(height**2)
+
+    # if bmi < 18.5:
+    #     result = "Underweight"
+    # elif 18.5 <= bmi < 25:
+    #     result = "Normal weight"
+    # elif 25 <= bmi < 30:
+    #     result = "Overweight"
+    # elif bmi >= 30:
+    #     result = "Obesity"
+
+    # print(f"BMI is {bmi:.1f}")
+    # print(result)
+
+# 19. บริษัท ABC จำกัด ต้องการให้ส่วนลดลูกค้าที่ซื้อสินค้าในมูลค่าตั้งแต่ 1000 บาทขึ้นไป โดยถ้าลูกค้าซื้อ
+# สินค้าตั้งแต่ 1000 บาทขึ้นไป แต่น้อยกว่า 3000 บาท ให้ส่วนลด 10% และถ้าซื้อสินค้าตั้งแต่ 3000 บาทขึ้นไป ให้
+# ส่วนลด 15%
+# จงเขียนโปรแกรมที่รับจำนวนราคาสินค้าแล้วคำนวณเงินสุทธิที่ลูกค้าต้องชำระ
+
+    # buying = float(input("Enter buying amount: "))
+    # discount = 1
+    # if buying >= 1000 and buying < 3000:
+    #     discount = 0.90
+    # elif buying >= 3000:
+    #     discount = 0.85
+    # solu = buying * discount
+    # print(f"Amount due after discount is {solu:.2f} baht")
+
+# 20. จงเขียนโปรแกรมสำหรับเล่นเกมทายตัวเลข โดยกำหนดให้โปรแกรมสร้างเลขเป้าหมาย (target) ที่มีค่า
+# ตั้งแต่ 0 – 100 แล้วรับตัวเลขจากผู้เล่นที่ทายเข้ามา กำหนดให้เป้าหมาย (target) เท่ากับ 72
+
+    # num = int(input("Enter your guess (0 - 100): "))
+    # correct_num = 72
+    # if num > 100 or num < 0:
+    #     print("Sorry, out of range, try again later")
+    # elif num == correct_num:
+    #     print("Congratulations, your guess is correct.")
+    # else:
+    #     print("Sorry, your guess is wrong, try again later")
+
+# 21. เขียนโปรแกรมเพื่อตรวจสอบ Username และ Password เพื่อตรวจสอบว่าเป็น Admin หรือไม่
+# กำหนดให้
+# - username คือ admin
+# - password คือ Ad13n@23t
+
+    # userinp = input("Username: ")
+    # passwordinp = input("Password: ")
+
+    # correctuser = "admin"
+    # correctpassword = "Ad13n@23t"
+
+    # if userinp == correctuser and passwordinp == correctpassword:
+    #     print("Welcome, admin")
+    # else:
+    #     print("You are not admin")
+
+# 22. เขียนโปรแกรมเพื่อช่วยร้านอาหารคำนวณราคา โดย Japanese buffet ราคา 1000 บาท และ Korean
+# buffet ราคา 1500 บาท ถ้าวันนี้เป็นวันพุธจะได้รับส่วนลด 15%
+
+    # country = input("Enter your buffet choice: ")
+    # day = input("s today Wednesday (yes/no): ")
+
+    # price = 0
+    # discount = 1
+
+    # if country == "Korean":
+    #     price = 1500
+    #     if day == "yes":
+    #         discount = 0.85
+    # elif country == "Japanese":
+    #     price = 1000
+    #     if day == "yes":
+    #         discount = 0.85
+
+    # result = price * discount
+    # print(f"Your payment is {result:.2f} baht")
+
+# 23. ร้านขายเครื่องใช้ไฟฟ้าแห่งหนึ่ง นำเครื่องใช้ไฟฟ้าสามชนิดมาลดราคา ดังนี้
+# - TV ราคา 6000 บาท
+# - DVD player ราคา 1500 บาท
+# - Audio System ราคา 3000 บาท
+# ร้านค้ามอบส่วนลดพิเศษ 20% ให้กับลูกค้าที่มียอดซื้ออย่างน้อย 24,000 บาท
+# จงเขียนโปรแกรมเพื่อรับจำนวนสินค้าแต่ละชนิดที่ลูกค้าจะซื้อ (เป็นจำนวนเต็มบวกหรือศูนย์) แล้ว
+# คำนวณยอดซื้อ และแสดง ยอดซื้อรวม (total price) ส่วนลด (discount) ถ้ามี และ ราคาที่ต้องชำระ
+# (payment) โดยราคาแสดงด้วยทศนิยม 2 ตำแหน่ง
+
+    # tv = 6000
+    # dvd = 1500
+    # audio = 3000
+
+    # tvinp = int(input("How many TVs: "))
+    # dvdinp = int(input("How many DVD players: "))
+    # audioinp = int(input("How many Audio System: "))
+
+    # total = (tv * tvinp) + (dvd * dvdinp) + (audio * audioinp)
+    # if total >= 24000:
+    #     discountprice = total * 0.20
+    #     newprice = total - discountprice
+
+    #     print(f"Total price is {total:.2f} baht")
+    #     print(f"You've got a discount of {discountprice:.2f} baht")
+    #     print(f"Your payment is {newprice:.2f} baht")
+    # else:
+    #     print(f"Total price is {total:.2f} baht")
+    #     print(f"Your payment is {total:.2f} baht")
+
+
+"""unit11 while loop"""
+
+# เขียนคำสั่งโดยใช้ลูป while เพื่อให้แสดงผลลัพธ์ต่อไปนี้ออกทางหน้าจอ
+# 1. 1, 3, 5, 7, 9, 11, 13, 15,
+    # i = 15
+    # while i > 0:
+    #     print(i)
+    #     i -= 2
+
+# 2. 2, 5, 8, 11, 14, 17,
+    # i = 17
+    # while i >= 2:
+    #     print(i)
+    #     i -=3
+
+# 3. 30, 20, 10, 0, -10,-20, -30
+    # i = -30
+    # while i <= 30:
+    #     print(i)
+    #     i += 10
+
+# 4. 15, 23, 31, 39, 47, 55
+    # i = 55
+    # while i >=15:
+    #     print(i)
+    #     i -= 8
+
+
+"""Unit 16 Lists"""
+#  Method            Meaning
+# append()          เพิ่มelement ไปที่ล าดับสุดท้ายของ list
+# clear()           ลบ elementทั้งหมดใน list
+# copy()            คัดลอก list
+# count()           นับจ านวน element ใน list ด้วยค่าที่ระบุ
+# extend()          เพิ่มelement(หลายตัว) ไปที่ล าดับสุดท้ายของ 
+# list
+# Index()           คืนค่าต าแหน่งของ element ใน list
+# insert()          เพิ่ม element โดยอ้างอิงต าแหน่ง
+# pop()             ลบ element โดยอ้างอิงต าแหน่ง
+# remove()          ลบ element ด้วยค่าที่เจาะจง
+# reverse()         กลับล าดับ element ใน list
+# sort()            เรียงล าดับelement ใน list
+
+# x = ["dog","cat","hamster",["horse","donkey"],"fish"]
+# print(x)
+# print(len(x))
+# print(type(x))
+# print(x[0])
+# print(x[3][1])
+# if "cat" in x:
+#     print("yes")
+# else:
+#     print("no")
+
+# x.append("bird")
+# print(x)
+
+# x.extend("wolf") # ใส่แบบแยก อันนี้จะได้ ['w', 'o', 'l', 'f']
+# print(x)
+
+# x.insert(1, "bird")
+# print(x)
+
+# x.remove("dog") # remove ให้ใส่ค่า
+# print(x)
+
+# x.pop(1) # pop ให้ใส่ตำแหน่ง
+# print(x)
+
+# del x[0] # ลบแบบหายไปตลอดกาล
+# print(x)
+
+#แปลง str ให้เป็น list แบบแยกตัว
+# x = "kitty"
+# y = list(x)
+# print(y)
+# >>>['k', 'i', 't', 't', 'y']
+
+#แปลง str ให้เป็น list
+# x1 = "cat"
+# x2 = "cat dog bird"
+# print(x1.split())
+# print(x2.split())
+# >>>['cat']
+# >>>['cat', 'dog', 'bird']
+
+# x = ['cat', 'dog', 'bird']
+# for i in x:
+#     print(i)
+# >>>cat
+# >>>dog
+# >>>bird

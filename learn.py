@@ -148,6 +148,84 @@
 # if condition:
 #     statement
 
-a = 20
-if a > 10:
-    print("a is bigger than 10")
+#EX:   a = 20
+#      if a > 10:
+#          print("a is bigger than 10")
+
+#>>> a is bigger than 10
+
+# EX:  n = int(input())
+#      if n % 2 == 0:
+#         print(“%d is even” % n)
+
+
+"""unit11 while loop"""
+
+# เงื่อนไขต้องเป็นจริง จึงจะท างาน
+# while condition:
+#     statement
+
+# i = 0
+# while i < 10:
+#     print(i)
+#     i += 1
+
+# >>> 0
+# >>> 1
+# >>> 2
+# >>> 3
+# >>> 4
+# >>> 5
+# >>> 6
+# >>> 7
+# >>> 8
+# >>> 9
+
+# พิมพ์จำนวนเต็มตั ้งแต่ 0 ถึง 10โดยไม่เอาเลข 5
+# i = 0
+# while i <= 10:
+#     if i== 5:
+#         i+= 1
+#         continue
+#     print(i)
+#     i+= 1
+
+# รับค่าตัวเลขจากผู ้ใช้เข้ามาเรื ่อยๆ จนกว่าจะใส่ -1 จึง หยุ
+# while True:
+#     n = int(input())
+#     if n == -1:
+#         break
+
+# รับค่าจ านวนเต็มแล้วหาค่า factorial ของจ านวนนั ้น
+# n = int(input())
+# summ = 1
+# while n >= 1:
+#     summ *= n
+#     n -= 1
+# print(summ)
+
+# รับจ านวนเต็มบวก 5 จ านวน แล้วหาผลรวมทั ้งหมด
+
+    # solu = 0
+    # i = 0
+    # while i < 5:
+    #     n = int(input())
+    #     solu += n
+    #     i += 1
+    # print(solu)
+
+# Nested while
+# เงื่อนไขต้องเป็นจริง จึงจะท างาน
+# while condition1:
+#   while condition2:
+#       statement2
+#   statement1
+
+i = 1
+while i <=5:
+    print(f"round{i}")
+    j = 1
+    while j <=3:
+        print(j)
+        j += 1
+    i += 1
