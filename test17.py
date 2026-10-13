@@ -1,16 +1,29 @@
 """test"""
 
-jamnuan = int(input())
-for i in range(jamnuan):
-    plastic, can, glass = map(float, input().split())
-    total = plastic + can + glass
-    print(f"{total:.2f}", end="")
-    if total > 50:
-        print(", Overload", end="")
-        if plastic > 20:
-            print(", Check Type Plastic", end="")
-        if can > 20:
-            print(", Check Type Can", end="")
-        if glass > 20:
-            print(", Check Type Glass", end="")
-    print()
+inp = input()
+
+if len(inp) == 3:
+    front = inp[0:2]
+elif len(inp) == 2:
+    front = inp[0]
+last = inp[-1]
+
+if front == "K":
+    front = "King"
+elif front == "Q":
+    front = "Queen"
+elif front == "J":
+    front = "Jack"
+elif front == "A":
+    front = "Ace"
+
+if last == "D":
+    last = "Diamonds"
+elif last == "H":
+    last = "Hearts"
+elif last == "S":
+    last = "Spades"
+elif last == "C":
+    last = "Clubs"
+
+print(f"{front} of {last}")
