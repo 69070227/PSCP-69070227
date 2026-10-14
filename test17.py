@@ -1,29 +1,27 @@
-"""test"""
+"""Duplicate I"""
 
-inp = input()
+try:
+    m = int(input())
+    n = int(input())
 
-if len(inp) == 3:
-    front = inp[0:2]
-elif len(inp) == 2:
-    front = inp[0]
-last = inp[-1]
+    group1 = []
+    for _ in range(m):
+        group1.append(input().strip())
 
-if front == "K":
-    front = "King"
-elif front == "Q":
-    front = "Queen"
-elif front == "J":
-    front = "Jack"
-elif front == "A":
-    front = "Ace"
+    group2 = []
+    for _ in range(n):
+        group2.append(input().strip())
+except EOFError:
+    pass
 
-if last == "D":
-    last = "Diamonds"
-elif last == "H":
-    last = "Hearts"
-elif last == "S":
-    last = "Spades"
-elif last == "C":
-    last = "Clubs"
+both = []
+for code in group1:
+    if code in group2 and code not in both:
+        both.append(code)
 
-print(f"{front} of {last}")
+if not both:
+    print("Nope")
+else:
+    both.sort(reverse=True)
+    for code in both:
+        print(code)
