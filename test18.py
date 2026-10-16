@@ -1,48 +1,36 @@
-"""Pad Thai"""
+"""Giraffe"""
 
-recipe = ("Pad Thai Sauce", "Tofu", "Pickle Turnip", "Shrimp", "Bean Sprouts",
-          "Noodle", "Chives", "Lime", "Egg", "Oil", "Peanuts")
-taste = ("Sweet", "Sour", "Salty")
+# รับจำนวนยีราฟ
+n = int(input())
 
-ingre = []
-while True:
-    inp_in = input().strip()
-    if inp_in == "Cook":
-        break
-    ingre.append(inp_in)
+# วนรับความสูงของยีราฟแต่ละตัว แล้วเก็บใส่ list
+giraffe = []
+for i in range(n):
+    inp = int(input())
+    giraffe.append(inp)
 
-flavor = []
-while True:
-    inp_fla = input().strip()
-    if inp_fla == "End":
-        break
-    flavor.append(inp_fla)
+# ตัวนับจำนวนยีราฟที่ไม่โดนแย่งกิน
+count = 0
 
-outsider_stuff = False
-for thing in ingre:
-    if thing not in recipe:
-        outsider_stuff = True
+# วนดูทีละตำแหน่ง i (0 ถึง n-1) เพื่อเทียบตัวปัจจุบันกับเพื่อนที่ติดกัน
+for i in range(n):
+    # สมมติไว้ก่อนว่าตัวนี้ไม่โดนแย่ง ถ้าเจอเหตุผลค่อยเปลี่ยนเป็น False
+    ok = True
 
-outsider_flavor = False
-for fla in flavor:
-    if fla not in taste:
-        outsider_flavor = True
+    # ถ้าตำแหน่งปัจจุบันมากกว่า 0 แสดงว่าไม่ใช่ตัวแรกสุด จึงมีเพื่อนซ้าย (ตำแหน่ง i - 1)
+    # แล้วเทียบว่าตัวปัจจุบันเตี้ยกว่าเพื่อนซ้ายไหม ถ้าใช่ ตัวนี้โดนแย่งกิน
+    if i > 0 and giraffe[i] < giraffe[i - 1]:
+        ok = False
 
-complete_recipe = True
-for item in recipe:
-    if item not in ingre:
-        complete_recipe = False
+    # ถ้าตำแหน่งปัจจุบันน้อยกว่าตำแหน่งสุดท้าย (n - 1) แสดงว่าไม่ใช่ตัวท้ายสุด จึงมีเพื่อนขวา (ตำแหน่ง i + 1)
+    # แล้วเทียบว่าตัวปัจจุบันเตี้ยกว่าเพื่อนขวาไหม ถ้าใช่ ตัวนี้โดนแย่งกิน
+    if i < n - 1 and giraffe[i] < giraffe[i + 1]:
+        ok = False
 
-complete_flavor = True
-for t in taste:
-    if t not in flavor:
-        complete_flavor = False
+    # ถ้า ok ยังเป็น True แสดงว่าไม่เข้าเงื่อนไขทั้งสองฝั่ง
+    # ตัวนี้สูงกว่าเพื่อนข้างๆ ทุกด้านที่มี ได้กินอย่างมีความสุข นับเพิ่ม 1
+    if ok:
+        count += 1
 
-if outsider_stuff:
-    print("This is not Pad Thai!!!")
-elif not complete_recipe:
-    print("This is bad!")
-elif complete_flavor and not outsider_flavor:
-    print("Delicious!")
-else:
-    print("Not Bad...")
+# พิมพ์จำนวนยีราฟที่ไม่โดนแย่งกิน
+print(count)
