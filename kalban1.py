@@ -807,7 +807,7 @@ h = 0
     # while True:
     #     num = int(input())
     #     count += 1
-    #     if num == 72:
+    #     if num == target:
     #         print(f"Congratulations, your guess is correct.")
     #         print(f"Total number of guesses is {count}")
 
@@ -841,8 +841,16 @@ h = 0
 # 21. จงเขียนโปรแกรมรับเลขจำนวนเต็มบวก แล้วหาผลบวกของเลขทุกหลัก ถ้าผลบวกยังมีมากกว่าหนึ่งหลัก
 # ให้บวกเลขทุกหลักอีกครั้ง ทั้งนี้กำหนดให้ในการหาผลบวกของหลักเลขจนเหลือหลักเดียว ต้องเป็นการดำเนินการ
 # ของจำนวนเต็มเท่านั้น (ไม่อนุญาตให้ใช้ string หรือ list)
+    # num = int(input())
 
-# อันนี้ไม่รู้ ใบ้หน่อย
+    # while num >= 10:
+    #     total = 0
+    #     while num > 0:
+    #         total += num % 10
+    #         num //= 10
+    #     num = total        # ลูปข้างในทำให้ num เหลือ 0 แล้ว จึงเอาผลบวกมาใส่คืน
+
+    # print(num)
 
 
 # 22. การโยนโบว์ลิง 1 เกม ประกอบด้วยการโยนทั้งหมด 10 frames แต่ละ frame ผู้เล่นจะโยนลูกโบว์ลิง 1
@@ -853,20 +861,258 @@ h = 0
 # ทั้งนี้ ในการคิดคะแนนในแต่ละ frame ทั้ง strike และ spare คิดเป็น 10 แต้ม และ open frame ได้แต้มตาม
 # จำนวน pin ล้ม จงเขียนโปรแกรมเพื่อรับแต้มจากการโยนโบว์ลิงทั้ง 10 frames และแสดงคะแนนที่ได้จากเกมนั้น
 
-rob = 1
-total = 0
-while rob <= 10:
-    print(f"Frame # {rob}")
-    inp = int(input("Number of pins down: "))
-    total += inp
-    if inp != 10:
-        print(f"Frame # {rob}")
-        inp2 = int(input(f"Number of pins down (0 - {10-inp}): "))
-        total += inp2
+    # rob = 1
+    # total = 0
+    # while rob <= 10:
+    #     print(f"Frame # {rob}")
+    #     inp = int(input("Number of pins down: "))
+    #     total += inp
+    #     if inp != 10:
+    #         print(f"Frame # {rob}")
+    #         inp2 = int(input(f"Number of pins down (0 - {10-inp}): "))
+    #         total += inp2
 
-    rob += 1
+    #     rob += 1
 
-print(f"Total score is {total}")
+    # print(f"Total score is {total}")
+
+
+
+"""unit12 for loop"""
+
+# 1. for i in range(1, 101):
+#Ans 100 รอบ จบที่ 100
+
+# 2. for i in range(7, 77, 7):
+#Ans 10 รอบ จบที่ 70
+
+# 3. for i in range(20, 1, -2):
+#Ans 10 รอบ จบที่ 2
+
+# 4. for i in range(2, 18, 3):
+#Ans 6 รอบ จบที่ 17
+
+# 5. for i in range(55, 0, -11):
+#Ans 5 รอบ จบที่ 11
+
+# 6. for i in range(1, 0):
+#Ans 0 ไม่แสดงอะไร
+
+
+# 7.) 1, 3, 5, 7, 9, 11, 13, 15,
+# for i in range(1,16,2):
+#     print(i)
+
+# 8.) 2, 5, 8, 11, 14, 17,
+# for i in range(2, 18,3):
+#     print(i)
+
+# 9.) 30, 20, 10, 0, -10, 20, -30
+# for i in range(30, -31,-10):
+#     print(i)
+
+# 10.) 15, 23, 31, 39, 47, 55
+# for i in range(15, 56,8):
+#     print(i)
+
+# 11.) รับจำนวนเต็มบวก (n) 1 จำนวน แล้วหาผลบวกของจำนวนเต็มบวก 1 ถึง n
+# n = int(input())
+# total = 0
+# for i in range(1,n+1):
+#     total += i
+# print(total)
+
+# 12.) รับจำนวนเต็มบวก (n) 1 จำนวน แล้วหาว่า ตั้งแต่จำนวนเต็มบวก 1 ถึง n มีกี่จำนวนที่หาร n ลงตัว และจำนวนใดบ้างที่หาร n ลงตัว
+# n = int(input())
+# count = 0
+# found = []
+# for i in range(1,n+1):
+#     if n % i == 0:
+#         count += 1
+#         found.append(i)
+
+# print(count)
+# print(found)
+# 13. รับจำนวนเต็มบวก (n) 1 จำนวน แล้วตรวจสอบว่า n เป็นจำนวนเฉพาะหรือไม่
+
+# n = int(input())
+
+# # จำนวนที่น้อยกว่าหรือเท่ากับ 1 ไม่เป็นจำนวนเฉพาะ
+# if n <= 1:
+#     print(f"{n} ไม่เป็นจำนวนเฉพาะ")
+# else:
+#     is_prime = True
+    
+#     # ลองเอาตัวเลขตั้งแต่ 2 ถึง n-1 ไปหาร n
+#     for i in range(2, n):
+#         if n % i == 0:
+#             is_prime = False  # เจอตัวหารลงตัว แสดงว่าไม่ใช่จำนวนเฉพาะ
+#             break  # ออกจากลูปทันที ไม่ต้องตรวจต่อ
+
+#     if is_prime:
+#         print(f"{n} เป็นจำนวนเฉพาะ")
+#     else:
+#         print(f"{n} ไม่เป็นจำนวนเฉพาะ")
+
+# 14. รับค่าตัวเลขจำนวนเต็ม (n) 1 จำนวน แล้วหาค่า n!
+
+# n = int(input())
+# total = 1
+# for i in range(1,n+1):
+#     total *= i
+# print(total)
+
+# 15. รับค่าตัวเลขจำนวนเต็ม (n) 1 จำนวน แล้วแสดงตารางแม่สูตรคูณของตัวเลขที่รับเข้ามา
+
+# n = int(input())
+# for i in range(1,13):
+#     print(f"{n} x {i} = {n * i}")
+
+"""unit13 string"""
+# 1. I'm good at programming
+# 2. good
+# 3. programming
+# 4. pormig
+# 5. gnimmargorp ta doog m'I
+# 6. I'm programming
+
+# a = "I'm good at programming"
+
+# box = []
+# box.extend(a)
+# print(box)
+# print(a)
+# print(a[4:8])
+# print(a[12:23])
+# print(a[12:23:2])
+# print(a[::-1])
+# print(a[:3] + a[11:23])
+
+# 7. รับตัวอักษรเข้ามา 1 ตัว แล้วตรวจสอบว่าเป็นสระในภาษาอังกฤษหรือไม่
+# sara = ("a","e","i","o","u")
+# word = input()
+# havesara = False
+# for i in word:
+#     if i in sara:
+#         havesara = True
+# if havesara:
+#     print(True)
+# else:
+#     print(False)
+
+
+# 8. รับข้อความเข้ามา จากนั้นให้พิมพ์ความยาวของข้อความนั้นออกมา
+# word = input()
+# print(len(word))
+
+
+# 9. รับข้อความเข้ามา แล้วตรวจสอบว่ามีสระทั้งหมดกี่ตัว (นับตัวซ้ำ)
+# word = input()
+# sara = ("a","e","i","o","u")
+# count = 0
+# for i in word:
+#     if i in sara:
+#         count += 1
+# print(count)
+
+
+
+# 10. รับข้อความเข้ามา แล้วตรวจสอบว่ามีสระทั้งหมดกี่ตัว โดยให้แสดงดังนี้
+# word = input()
+# a = 0
+# e = 0
+# i = 0
+# o = 0
+# u = 0
+
+# for tua in word:
+#     if tua == "a":
+#         a += 1
+#     elif tua == "e":
+#         e += 1
+#     elif tua == "i":
+#         i += 1
+#     elif tua == "o":
+#         o += 1
+#     elif tua == "u":
+#         u += 1
+# total = a + e + i + o + u
+# print(f"a = {a}")
+# print(f"e = {e}")
+# print(f"i = {i}")
+# print(f"o = {o}")
+# print(f"u = {u}")
+# print(f"total = {total}")
+
+# 11. รับข้อความเข้ามา แล้วทำการ reverse (กลับข้อความ)
+# word = input()
+# print(word[::-1])
+
+# 12. รับข้อความเข้ามา แล้วตรวจสอบว่าเป็นพาลินโดรม(palindrome) หรือไม
+# word = input()
+# if word == word[::-1]:
+#     print(True)
+# else:
+#     print(False)
+
+"""Unit 14 string methods"""
+
+#x = "you are my destiny"
+
+# 1. You are my destiny
+#print(x.capitalize())
+
+# 2. you ARE my destiny
+#change = x.replace("are","ARE")
+#print(change)
+
+# 3. You are mY destiny
+#change = x.replace("my","mY")
+#print(change)
+
+# 4. You Are My Destiny
+#print(x.title())
+
+# 5. ต้องการทราบว่า “r” อยู่ตำแหน่งใด
+#print(x.find("r"))
+
+# 6. ข้อความลงท้ายด้วย “d” หรือไม่
+#print(x.endswith("d"))
+
+# 7. ข้อความเป็นตัวพิมพ์เล็กทั้งหมดหรือไม
+#print(x.islower())
+
+# 8. ข้อความขึ้นต้นด้วยตัวพิมพ์ใหญ่หรือไม่
+#print(x.isupper())
+
+# 9. ข้อความลงท้ายด้วยตัวพิมพ์เล็กหรือไม่
+#print(x[-1].islower())
+
+#10. จงเขียนโปรแกรมเพื่อหาความยาวคำสุดท้ายของประโยค
+# word = input().split()
+# back = word[1]
+# print(len(back))
+
+# 11. จงเขียนโปรแกรมเพื่อตรวจสอบว่าการตั้ง username ถูกต้องหรือไม่ โดยมีเกณฑ์ดังนี้
+# - username ต้องอยู่ระหว่าง 4-25 ตัวอักษร
+# - ต้องขึ้นต้นด้วยตัวอักษร
+# - สามารถประกอบด้วย ตัวอักษร, ตัวเลข และ underscoreได้
+# - ต้องไม่ลงท้ายด้วย underscore
+
+data = input()
+if 4<= len(data) <=25:
+    if data[0].isalpha():
+        if data.isalpha().isdigit() and "_" in data:
+            if not data.endswith("_"):
+                print("yes")
+else:
+    print("no")
+
+
+
+
+
+
 
 
 

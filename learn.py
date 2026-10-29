@@ -221,11 +221,92 @@
 #       statement2
 #   statement1
 
-i = 1
-while i <=5:
-    print(f"round{i}")
-    j = 1
-    while j <=3:
-        print(j)
-        j += 1
-    i += 1
+# จะทำ while ข้างในสุดก่อน
+# i = 1
+# while i <=5:
+#     print(f"round{i}")
+#     j = 1
+#     while j <=3:
+#         print(j)
+#         j += 1
+#     i += 1
+
+# >>>  round1
+# >>>  1
+# >>>  2
+# >>>  3
+# >>>  round2
+# >>>  1
+# >>>  2
+# >>>  3
+# >>>  round3
+# >>>  1
+# >>>  2
+# >>>  3
+# >>>  round4
+# >>>  1
+# >>>  2
+# >>>  3
+# >>>  round5
+# >>>  1
+# >>>  2
+# >>>  3
+
+"""unit12 for loop"""
+
+#for i in range(start,stop,step):
+
+# for i in range(10):
+#     print(i)
+
+# 0
+# 1
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+
+# for i in range(2,10):
+#     print(i)
+
+# 2
+# 3
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
+
+# for i in range(0,11,2):
+#     print(i)
+# 0
+# 2
+# 4
+# 6
+# 8
+# 10
+
+# for i in range(10,0,-1):
+#     print(i)
+
+# text = "hello"
+# for i in text:
+#     print(i)
+
+# text = "hello"
+# for i in text[::-1]:
+#     print(i)
+
+
+"""unit13 string"""
+print("Hello")
+print("\"Hello\"")
+text = "Hello World"
+print(text)
+print(text[0])
+print(text[-1:0])

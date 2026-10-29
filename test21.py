@@ -1,10 +1,15 @@
 """test"""
-import json
+push_count = 0
+satana = False
+while True:
+    kamsang = input()
+    if kamsang == "END":
+        break
 
-inp = json.loads(input())
-filter = int(input())
+    if kamsang == "C":
+        satana = True
+    elif satana == True and kamsang == "P":
+        push_count += 1
+        satana =False
 
-box = {}
-for key in sorted(inp):
-    if key > filter:
-        box = inp[key]
+print(push_count)
